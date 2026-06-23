@@ -1,66 +1,126 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>F.R.I.E.N.D. v3 Executive Demo</title>
-<style>
-body{font-family:Arial,sans-serif;background:#e9edf3;margin:0}
-.header{background:#0b3aa6;color:white;padding:16px;text-align:center}
-.card{background:white;margin:14px;border-radius:16px;padding:18px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-.circle{width:220px;height:220px;border-radius:50%;background:#ef1d2f;color:white;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-margin:20px auto;font-weight:bold}
-.btn{display:block;background:#0b3aa6;color:white;text-decoration:none;padding:14px;
-margin:10px 0;border-radius:12px;text-align:center}
-.small{color:#555}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>F.R.I.E.N.D. TC-52 Executive Demo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="header">
-<h1>F.R.I.E.N.D.</h1>
-<div>Full Retail Integration Engaged Network Dynamics</div>
-</div>
+  <main class="phone-wrap">
+    <div class="zebra-top">▰ ZEBRA</div>
+    <section class="device">
+      <div class="screen">
+        <div class="statusbar">
+          <span>10:30 AM</span>
+          <span>◥ ▲ ▌</span>
+        </div>
 
-<div class="card">
-<div class="circle">
-<div>1</div>
-<div>Priority Mission</div>
-<div>Hot Holding Temp Check</div>
-</div>
-<p><b>Assigned:</b> Alex | <b>Target:</b> 165°F+</p>
-<a class="btn" href="#temp">Associate Mode</a>
-<a class="btn" href="#leader">Leader Dashboard</a>
-<a class="btn" href="#exec">Executive Dashboard</a>
-</div>
+        <header class="app-header">
+          <button class="hamburger" onclick="go('home')">☰</button>
+          <div class="brand">
+            <div class="friend">F.R.I.E.N.D.</div>
+            <div class="sub">FULL RETAIL INTEGRATION</div>
+            <div class="sub small">ENGAGED NETWORK DYNAMICS</div>
+          </div>
+          <button class="club" onclick="go('alerts')">♧<b>7</b></button>
+          <div class="store-row">
+            <div class="logo-box">KING<br><span>Soopers</span></div>
+            <div>
+              <h2>Store #129</h2>
+              <p>1000 Vista Pkwy<br>Erie, CO 80516</p>
+            </div>
+            <div>
+              <p>Open 6:00 AM - 10:00 PM</p>
+              <p>Store Status</p>
+              <p><span class="dot"></span> Open</p>
+            </div>
+          </div>
+        </header>
 
-<div class="card" id="temp">
-<h2>Guided Temperature Mission</h2>
-<ol>
-<li>Select Mission</li>
-<li>Select Equipment</li>
-<li>Take Temperature</li>
-<li>Record Location</li>
-<li>Complete Mission</li>
-</ol>
-<p><b>Actual Temperature:</b> 171°F</p>
-<p style="color:green"><b>COMPLIANT</b> (165°F or Above)</p>
-</div>
+        <div class="date-row">
+          <span>▣ Today is May 12, 2024</span>
+          <span>↻ Last Updated: 9:45 AM</span>
+        </div>
 
-<div class="card" id="leader">
-<h2>Jamie - Department Leader</h2>
-<p>Temperature Mission Complete</p>
-<p>Associate: Alex</p>
-<p>Status: Compliant</p>
-</div>
+        <section id="home" class="page active">
+          <div class="priority-zone">
+            <div class="mini-card"><b>OPEN MISSIONS</b><strong>12</strong><span>View All</span></div>
+            <button class="priority-circle" onclick="go('temperature')">
+              <span class="warn">⚠</span>
+              <span class="pc-label">PRIORITY MISSION</span>
+              <strong>Hot Holding<br>Temperature<br>Check</strong>
+              <span>Deli • Hot Case</span>
+              <span>Assigned to Alex</span>
+              <em>EST. TIME: 4 MIN</em>
+            </button>
+            <div class="mini-card"><b>COMPLIANCE</b><strong class="green">98%</strong><span>On Track</span></div>
+            <div class="mini-card"><b>READINESS</b><strong class="green">94%</strong><span>On Track</span></div>
+            <div class="mini-card"><b>ALERTS</b><strong class="red">2</strong><span>Action Required</span></div>
+          </div>
 
-<div class="card" id="exec">
-<h2>Executive Dashboard</h2>
-<p>155 Stores</p>
-<p>22,000+ Associates</p>
-<p>Readiness: 94%</p>
-<p>Compliance: 98%</p>
-</div>
+          <button class="wide-card" onclick="go('associate')">
+            <div class="icon">👤</div><div><h2>ASSOCIATE MODE</h2><p>Welcome Alex, Fresh Start and guided mission workflow</p></div><span>›</span>
+          </button>
+          <button class="wide-card" onclick="go('composite')">
+            <div class="icon">◔</div><div><h2>COMPOSITE DASHBOARD</h2><p>Store performance overview and key metrics</p></div><span>›</span>
+          </button>
+
+          <div class="quick-grid">
+            <button onclick="go('missions')">📋<b>MISSIONS</b><span>View All</span></button>
+            <button onclick="go('alerts')">🔔<b>ALERTS</b><span>Action Required</span></button>
+            <button onclick="go('metrics')">📊<b>METRICS</b><span>Key Performance</span></button>
+            <button onclick="go('leader')">👥<b>TEAM</b><span>Leader View</span></button>
+          </div>
+        </section>
+
+        <section id="associate" class="page">
+          <button class="back" onclick="go('home')">‹ Back</button>
+          <h1>Welcome Alex!</h1>
+          <div class="card"><h2>Fresh Start Complete</h2><p><b>Status:</b> <span class="green">Complete</span></p><button class="success" onclick="go('temperature')">Next Mission</button></div>
+          <div class="card"><h2>F.R.I.E.N.D. Support</h2><p>F.R.I.E.N.D. will guide you screen by screen so every step is clear, accurate, and visible to your leader.</p></div>
+        </section>
+
+        <section id="temperature" class="page">
+          <button class="back" onclick="go('home')">‹ Back</button>
+          <h1>Guided Temperature Mission</h1>
+          <div class="stepper"><span class="on">1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+          <div class="card mission">
+            <h2>Hot Holding Temperature Check</h2>
+            <p><b>Associate:</b> Alex M. &nbsp; <b>Leader:</b> Jamie R.</p>
+            <p><b>Department:</b> Deli &nbsp; <b>Location:</b> Hot Case</p>
+            <p><b>Target:</b> 165°F or above</p>
+          </div>
+          <div class="card"><h2>1. Select Mission</h2><button class="choice selected">🔥 Hot Holding Temps</button><button class="choice">❄ Cold Case Temps</button><button class="choice">💧 Cooler Temps</button><button class="choice">❄ Freezer Temps</button></div>
+          <div class="card"><h2>2. Select Equipment</h2><button class="choice selected">🌡 Probe Thermometer</button><button class="choice">🔫 Infrared Thermometer</button></div>
+          <div class="card temp-card"><h2>3. Take Temperature</h2><p>Insert probe and record reading.</p><div class="temp">171°F</div><p>Target: 165°F or above</p><div class="badge-good">✓ IN RANGE</div></div>
+          <div class="card"><h2>4. Record Location</h2><button class="choice selected">Deli Hot Case</button><button class="choice">Chicken Station</button><button class="choice">Soup Bar</button></div>
+          <div class="card complete"><h2>5. Mission Complete</h2><div class="big-check">✓</div><p>Hot Holding Temps Completed Successfully</p><ul><li>Data Recorded</li><li>Dashboard Updated</li><li>Leader Notified</li></ul><button class="success" onclick="go('leader')">View Jamie's Dashboard</button></div>
+        </section>
+
+        <section id="leader" class="page">
+          <button class="back" onclick="go('home')">‹ Back</button>
+          <h1>Jamie R. Leader Visibility</h1>
+          <div class="card alert-good"><h2>Temperature Mission Complete</h2><p>Alex M. recorded <b>171°F</b> for Deli Hot Case.</p><p>Status: <span class="green">Compliant</span></p></div>
+          <div class="card"><h2>Leader Actions</h2><p>Mission Status • Temperature Compliance • Missed Checks • Coaching Opportunities • Department Readiness • Food Safety Alerts</p></div>
+        </section>
+
+        <section id="composite" class="page">
+          <button class="back" onclick="go('home')">‹ Back</button>
+          <h1>Composite Dashboard</h1>
+          <div class="metric-grid"><div>94%<span>Readiness</span></div><div>98%<span>Compliance</span></div><div>12<span>Open Missions</span></div><div>2<span>Alerts</span></div></div>
+          <div class="card"><h2>Store Performance</h2><p>Food safety, readiness, production, replenishment, Fresh Start, and training all visible in one workflow.</p></div>
+        </section>
+
+        <section id="missions" class="page"><button class="back" onclick="go('home')">‹ Back</button><h1>Missions</h1><div class="card"><h2>Open Missions</h2><p>Hot Holding Temperature Check • Production Plan • Replenishment • Fresh Start</p></div></section>
+        <section id="alerts" class="page"><button class="back" onclick="go('home')">‹ Back</button><h1>Alerts</h1><div class="card"><h2>2 Action Required</h2><p>Temperature follow-up and production readiness review.</p></div></section>
+        <section id="metrics" class="page"><button class="back" onclick="go('home')">‹ Back</button><h1>Metrics</h1><div class="metric-grid"><div>155<span>Stores</span></div><div>22K+<span>Associates</span></div><div>5.6x<span>ROI</span></div><div>75<span>Days</span></div></div></section>
+
+        <footer><span>▣ Data Secure</span><span>F.R.I.E.N.D. v2.4.1</span></footer>
+      </div>
+    </section>
+    <div class="android-nav">◀ ● ■</div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

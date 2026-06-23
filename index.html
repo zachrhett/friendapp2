@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>F.R.I.E.N.D. TC-52 Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="device-wrap">
+    <section class="tc52">
+      <div class="bezel-top"><span>ZEBRA</span></div>
+      <div class="screen">
+        <header class="status"><span>9:14 AM</span><span>Wi-Fi ▰ 100%</span></header>
+        <header class="app-head">
+          <div class="ks-logo"><b>KING</b><em>Soopers</em></div>
+          <div><h1>F.R.I.E.N.D.</h1><p>Guided Compliance. Confident Execution.</p></div>
+          <button class="profile" onclick="go('home')">A<br><small>Alex</small></button>
+        </header>
+        <section id="view"></section>
+        <footer class="dock"><button onclick="go('home')">Home</button><button onclick="go('temperature')">Temperature</button><button onclick="go('leader')">Leader</button><button onclick="go('metrics')">Metrics</button></footer>
+      </div>
+    </section>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

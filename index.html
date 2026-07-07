@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#062369" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>F.R.I.E.N.D.</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <section id="imageStage" class="stage active" data-screen="home">
+      <img id="screenImage" src="images/home.png" alt="FRIEND Home Screen" draggable="false" />
+      <div id="hotspots" aria-label="Home navigation">
+        <button class="hotspot" data-target="scorecard" aria-label="Store Scorecard"></button>
+        <button class="hotspot" data-target="alerts" aria-label="Open Alerts"></button>
+        <button class="hotspot" data-target="associate-temp" aria-label="Associate Temperature Module"></button>
+        <button class="hotspot" data-target="temperature" aria-label="Temperature Compliance"></button>
+        <button class="hotspot" data-target="sales" aria-label="Sales versus Plan"></button>
+        <button class="hotspot" data-target="labor" aria-label="Labor Health"></button>
+        <button class="hotspot" data-target="production" aria-label="Production"></button>
+        <button class="hotspot" data-target="temperature" aria-label="Temperature"></button>
+        <button class="hotspot" data-target="inventory" aria-label="Inventory"></button>
+        <button class="hotspot" data-target="ordering" aria-label="Ordering"></button>
+        <button class="hotspot" data-target="fresh-start" aria-label="Fresh Start"></button>
+        <button class="hotspot" data-target="safety" aria-label="Safety"></button>
+        <button class="hotspot" data-target="labor" aria-label="Labor"></button>
+        <button class="hotspot" data-target="sales" aria-label="Sales"></button>
+        <button class="hotspot" data-target="shrink" aria-label="Shrink"></button>
+        <button class="hotspot" data-target="food-safety" aria-label="Food Safety"></button>
+        <button class="hotspot wide" data-target="console" aria-label="Open FRIEND Console"></button>
+        <button class="hotspot nav" data-target="voice" aria-label="Voice"></button>
+        <button class="hotspot nav" data-target="alerts" aria-label="Alerts"></button>
+        <button class="hotspot nav" data-target="home" aria-label="Home"></button>
+        <button class="hotspot nav" data-target="maximo" aria-label="Maximo"></button>
+      </div>
+    </section>
+
+    <section id="moduleStage" class="stage" hidden>
+      <header class="moduleHeader">
+        <button id="backBtn" aria-label="Back">‹</button>
+        <h1 id="moduleTitle">Module</h1>
+        <button id="homeBtn" aria-label="Home">Home</button>
+      </header>
+      <div id="moduleBody"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
